@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title> License Plate Number Detection</title>
+ </head>
+ <body>
+   <h1> License Plate Number Detection </h1>
+   
+   <!--allows you to select values-->
+   <div>
+     <span> Choose a value between 1 and 3: </span>
+     <input type=number value="1" max="3" min="1" id="textInput">
+  
+     <input type="button" value="Display" onclick="click_both()">
+   </div>
+  
+   <br> 
+
+   <div>
+     <img src="" id="image">    <!--no value for “src”: a placeholder for image-->
+   </div>
+  
+   <div class='amount'>
+     <span class='key'> Plate Number: </span>   <!--no value: a placeholder for plate number-->
+     <span id='plate'>0 </span>
+   </div>
+
+    <br>
+
+   <!-- retrieve 1, 2, 3 of the latest records -->
+   <div class="container">
+    <span> Search through our database to get the most recent records. </span>
+    <form>
+    <label for="numrows">Choose number of lastest records:</label>
+    <select name="numrows" class="inputSelect" id="numrows"  >
+      <option value='just added'>just added</option>
+      <option value='last 3'>last 3</option>
+      <option value='last 5'>last 5</option>
+    </select>
+    <input type="button" class="submitButton" value="Submit" onclick="getRows()">
+    </form> 
+   </div><!-- record retrieval ends -->
+
+    <br>
+
+   <!--so html knows a JS file exists-->
+   <script type="text/javascript" src="rest.js"></script>
+ </body>
+</html>
